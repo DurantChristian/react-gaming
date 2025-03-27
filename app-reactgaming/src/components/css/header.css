@@ -1,0 +1,23 @@
+.game-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .game-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .game-item ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .game-item li {
+    margin-bottom: 5px;
+  }
+  
