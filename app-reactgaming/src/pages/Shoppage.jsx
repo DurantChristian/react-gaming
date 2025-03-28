@@ -1,15 +1,16 @@
 import React from "react";
-import gameshop from "/images/gameshop.png";
-import witcher3 from "/images/withcer3.png";
-import cyberpunk from "/images/Cyberpunk2077.png";
-import reddead from "/images/reddead.png";
-import eldenring from "/images/eldenring.png";
-import frozen from "/images/frozen.png";
-import casino from "/images/gamble.png";
-import sims4 from "/images/sims.png";
-import nascar from "/images/nascar.png";
-import minecraft from "/images/minecraft.png";
-import fortnite from "/images/fortnitecover.png";
+import { Link } from "react-router-dom";
+import gameshop from "../images/gameshop.png";
+import witcher3 from "../images/witcher3.png";
+import cyberpunk from "../images/Cyberpunk2077.png";
+import reddead from "../images/reddead2.png";
+import eldenring from "../images/eldenring.png";
+import frozen from "../images/frozen.png";
+import casino from "../images/gamble.png";
+import sims4 from "../images/sims.png";
+import nascar from "../images/nascar.png";
+import minecraft from "../images/minecraft.png";
+import fortnite from "../images/fortnitecover.png";
 import "../css/pages/shop.css";
 
 const Shop = () => {

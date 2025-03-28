@@ -1,10 +1,10 @@
 import React from "react";
-import Navigation from "../components/navigation";
-import john from "/images/john.png";
-import jane from "/images/jane.png";
-import user from "/images/user.png";
-import friend1 from "/images/friend1.png";
-import friend2 from "/images/friend2.png";
+import Navigation from "../components/Navigation";
+import john from "../images/john.png";
+import jane from "../images/jane.png";
+import user from "../images/user.png";
+import friend1 from "../images/friend1.png";
+import friend2 from "../images/friend2.png";
 import "../css/pages/dashboard.css";
 
 const Dashboard = () => {

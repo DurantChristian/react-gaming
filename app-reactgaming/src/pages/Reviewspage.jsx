@@ -1,21 +1,17 @@
 import React from "react";
-import witcher3 from "/images/witcher3.png";
-import callofduty from "/images/callofduty.png";
-import portal2 from "/images/portal2.png";
-import fortnite from "/images/fortnitecover.png";
-import minecraft from "/images/minecraft.png";
-import sims4 from "/images/sims.png";
-import eldenring from "/images/eldenring.png";
-import casino from "/images/gamble.png";
+import witcher3 from "../images/witcher3.png";
+import callofduty from "../images/callofduty.png";
+import portal2 from "../images/portal2.png";
+import fortnite from "../images/fortnitecover.png";
+import minecraft from "../images/minecraft.png";
+import sims4 from "../images/sims.png";
+import eldenring from "../images/eldenring.png";
+import casino from "../images/gamble.png";
 import "../css/pages/reviewspage.css";
 
 const Reviews = () => {
   return (
     <>
-      <head>
-        <title>Game Reviews - Gaming Overload</title>
-      </head>
-      
       <header>
         <h1>Game Reviews</h1>
       </header>

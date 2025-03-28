@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "../components/navigation";
-import userImage from "/images/user.png";
+import userImage from "../images/user.png";
 import "../css/pages/activity.css";
 
 const Activity = () => {

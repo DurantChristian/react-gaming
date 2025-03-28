@@ -1,5 +1,5 @@
 import React from "react";
-import witcher3 from "/images/witcher3.png";
+import witcher3 from "../images/witcher3.png";
 import "../css/pages/order.css";
 
 const Order = () => {

@@ -1,12 +1,13 @@
 import React from "react";
-import gameofthemonth from "/images/gameofthemonth.png";
-import topsell from "/images/topsell.png";
-import upcominggames from "/images/upcominggames.png";
-import exclusives from "/images/exclusives.png";
-import developerspotlight from "/images/gamedeveloper.png";
-import competitivegaming from "/images/competitive.png";
-import updates from "/images/patches.png";
-import accessories from "/images/accessories.png";
+import { Link } from "react-router-dom";
+import gameofthemonth from "../images/gameofthemonth.png";
+import topsell from "../images/topsell.png";
+import upcominggames from "../images/upcominggames.png";
+import exclusives from "../images/exclusives.png";
+import developerspotlight from "../images/gamedeveloper.png";
+import competitivegaming from "../images/competitive.png";
+import updates from "../images/patches.png";
+import accessories from "../images/accessories.png";
 import "../css/pages/home.css";
 
 const Home = () => {

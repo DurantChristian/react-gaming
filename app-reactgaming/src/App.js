@@ -5,7 +5,7 @@ import AboutContact from "./pages/AboutContact";
 import Reviews from "./pages/Reviewspage";
 import Shop from "./pages/Shoppage";
 import Dashboard from "./pages/Dashboardpage";
-import Navigation from "./components/navigation";
+import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
 function App() {

@@ -1,10 +1,10 @@
 import React from "react";
 import Navigation from "../components/navigation";
-import messageImage from "/images/message.png";
-import emailImage from "/images/email.png";
-import taskImage from "/images/task.png";
-import replyImage from "/images/reply.png";
-import alexImage from "/images/alex.png";
+import messageImage from "../images/message.png";
+import emailImage from "../images/email.png";
+import taskImage from "../images/task.png";
+import replyImage from "../images/reply.png";
+import alexImage from "../images/alex.png";
 import "../css/pages/notifications.css";
 
 const Notifications = () => {

@@ -1,0 +1,72 @@
+<!--userdashboard-->
+.secondary-nav {
+    background-color: #555;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width:100%;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.user-profiles, .user-details, .friends-list {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+}
+
+.user-profiles h2, .user-details h2, .friends-list h2 {
+    text-align: left;
+}
+
+.profile-box, .friend-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.profile-box img, .friend-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.profile-info, .friend-info {
+    flex-grow: 1;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background: #007BFF;
+}
+
+.delete-btn {
+    background: #ccc;
+    color: black;
+}
+
+.contact-btn {
+    background: #007BFF;
+}
