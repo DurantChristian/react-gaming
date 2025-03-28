@@ -1,6 +1,6 @@
 import React from "react";
 import storelogo from "../images/storelogo.png";
-import "../css/pages/aboutcontact.css";
+import "../pages/css/aboutcontact.css";
 
 const AboutContact = () => {
   return (

@@ -5,7 +5,7 @@ import emailImage from "../images/email.png";
 import taskImage from "../images/task.png";
 import replyImage from "../images/reply.png";
 import alexImage from "../images/alex.png";
-import "../css/pages/notifications.css";
+import "../pages/css/notifications.css";
 
 const Notifications = () => {
   return (

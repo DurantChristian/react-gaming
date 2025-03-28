@@ -5,7 +5,7 @@ import jane from "../images/jane.png";
 import user from "../images/user.png";
 import friend1 from "../images/friend1.png";
 import friend2 from "../images/friend2.png";
-import "../css/pages/dashboard.css";
+import "../pages/css/dashboard.css";
 
 const Dashboard = () => {
   return (

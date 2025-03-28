@@ -8,7 +8,7 @@ import developerspotlight from "../images/gamedeveloper.png";
 import competitivegaming from "../images/competitive.png";
 import updates from "../images/patches.png";
 import accessories from "../images/accessories.png";
-import "../css/pages/home.css";
+import "../pages/css/home.css";
 
 const Home = () => {
   return (

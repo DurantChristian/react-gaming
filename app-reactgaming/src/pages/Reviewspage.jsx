@@ -7,7 +7,7 @@ import minecraft from "../images/minecraft.png";
 import sims4 from "../images/sims.png";
 import eldenring from "../images/eldenring.png";
 import casino from "../images/gamble.png";
-import "../css/pages/reviewspage.css";
+import "../pages/css/reviewspage.css";
 
 const Reviews = () => {
   return (

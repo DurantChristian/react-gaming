@@ -11,7 +11,7 @@ import sims4 from "../images/sims.png";
 import nascar from "../images/nascar.png";
 import minecraft from "../images/minecraft.png";
 import fortnite from "../images/fortnitecover.png";
-import "../css/pages/shop.css";
+import "../pages/css/shoppage.css";
 
 const Shop = () => {
   return (

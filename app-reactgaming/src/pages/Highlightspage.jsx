@@ -1,6 +1,6 @@
 import React from "react";
 import gameofthemonth from "../images/gameofthemonth.png";
-import "../css/pages/Highlights.css";
+import "../pages/css/Highlights.css";
 
 const Highlights = () => {
   return (
