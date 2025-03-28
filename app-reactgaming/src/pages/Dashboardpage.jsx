@@ -10,7 +10,7 @@ import "../css/pages/dashboard.css";
 const Dashboard = () => {
   return (
     <div>
-    <Navigation/>
+    <Navigation />
     <main className="dashboard-container">
       <section className="user-profiles">
         <h2>User Profiles</h2>

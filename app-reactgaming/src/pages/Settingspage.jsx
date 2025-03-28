@@ -10,7 +10,7 @@ const Settings = () => {
         <title>Settings</title>
       </head>
 
-      <Navigation/>  
+      <Navigation />  
 
       <main className="settings-container">
         <h2>Settings</h2>

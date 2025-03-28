@@ -10,14 +10,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <><BrowserRouter basename={process.env.PUBLIC_URL}></BrowserRouter><Router>
+    <><Router>
       <Navigation/>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about-contact" element={<AboutContact/>} />
-        <Route path="/reviews" element={<Reviews/>} />
-        <Route path="/shop" element={<Shop/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route index element={<Home />} />
+        <Route path="/about-contact" element={<AboutContact />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer/>
     </Router></>

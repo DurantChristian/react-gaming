@@ -18,9 +18,9 @@ const Home = () => {
 
       <nav className="secondary-nav">
         <ul>
-          <li><Link to="/">Highlights</Link></li>
-          <li><Link to="/">Promotions</Link></li>
-          <li><Link to="/">Latest-arrivals</Link></li>
+          <li><Link to="#">Highlights</Link></li>
+          <li><Link to="#">Promotions</Link></li>
+          <li><Link to="#">Latest-arrivals</Link></li>
         </ul>
       </nav>
 
