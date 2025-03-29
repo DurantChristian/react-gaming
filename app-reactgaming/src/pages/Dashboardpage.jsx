@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import Navigation from "../components/navigation";
 import john from "../images/john.png";
 import jane from "../images/jane.png";
 import user from "../images/user.png";
