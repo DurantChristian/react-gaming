@@ -1,0 +1,68 @@
+<!--settings-->
+.settings-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.update-photo-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-form label {
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.settings-form input,
+.settings-form select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.save-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cancel-btn {
+    background: #ccc;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
