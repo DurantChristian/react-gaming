@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../components/navigation";
+import Navigation from "../components/Navigation";
 import messageImage from "../images/message.png";
 import emailImage from "../images/email.png";
 import taskImage from "../images/task.png";

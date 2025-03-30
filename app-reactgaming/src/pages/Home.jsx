@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import gameofthemonth from "../images/gameofthemonth.png";
 import topsell from "../images/topsell.png";
 import upcominggames from "../images/upcominggames.png";
@@ -11,6 +11,7 @@ import accessories from "../images/accessories.png";
 import "../pages/css/home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <header>
@@ -32,7 +33,7 @@ const Home = () => {
               <a href="https://progameguides.com/wp-content/uploads/2022/04/featured-disney-dreamlight-valley-all-confirmed-characters.jpg?resize=768,432">
                 <img src={gameofthemonth} alt="Game of the Month" />
               </a>
-              <a href="highlights.html"><p>Game of the Month</p></a>
+              <Link to="/highlights">{() => navigate("/highlights")}<p>Game of the Month</p> </Link>
             </div>
 
             <div className="grid-item">

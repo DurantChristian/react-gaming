@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import witcher3 from "../images/witcher3.png";
 import callofduty from "../images/callofduty.png";
 import portal2 from "../images/portal2.png";
@@ -10,6 +11,7 @@ import casino from "../images/gamble.png";
 import "../pages/css/reviewspage.css";
 
 const Reviews = () => {
+  const navigate = useNavigate();
   return (
     <>
       <header>
@@ -33,13 +35,14 @@ const Reviews = () => {
 
         <h2>Latest Game Reviews</h2>
         <section className="game-reviews">
+          <div className="reviews-container">
           <div className="review">
             <a href="https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png">
               <img src={witcher3} alt="The Witcher 3" />
             </a>
             <h3>The Witcher 3</h3>
             <p>An epic fantasy role-playing game with a rich storyline and immersive gameplay.</p>
-            <a href="gamereview.html">Read More</a>
+            <Link to="/gamereview">{() => navigate("/gamereview")}<a>Read More</a> </Link>
           </div>
           
           <div className="review">
@@ -103,6 +106,7 @@ const Reviews = () => {
             <h3>Casino</h3>
             <p>A thrilling and risky gambling game.</p>
             <a href="#">Read More</a>
+          </div>
           </div>
         </section>
       </main>

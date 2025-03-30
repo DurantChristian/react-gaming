@@ -58,3 +58,8 @@
 .read-btn, .dismiss-btn {
     margin-top: 10px;
 }
+
+.alert-buttons {
+    display: flex;
+    gap: 10px;
+}

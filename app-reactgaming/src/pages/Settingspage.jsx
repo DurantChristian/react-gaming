@@ -1,7 +1,7 @@
 import React from "react";
-import Navigation from "../components/navigation";
+import Navigation from "../components/Navigation";
 import userImage from "../images/user.png";
-import "../pages/css/Settings.css";
+import "../pages/css/settings.css";
 
 const Settings = () => {
   return (

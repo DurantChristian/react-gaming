@@ -7,6 +7,15 @@
     width:100%;
 }
 
+ul {
+    list-style: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
 .dashboard-container {
     display: flex;
     flex-wrap:wrap;

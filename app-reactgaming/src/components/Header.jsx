@@ -5,9 +5,6 @@ import "../components/css/header.css";
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-        <Link to="/">Gaming Overload</Link>
-      </div>
       <nav className="main-nav">
         <ul>
           <li>
@@ -17,10 +14,10 @@ const Header = () => {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/gamereviews">Game Reviews</Link>
+            <Link to="/reviews">Game Reviews</Link>
           </li>
           <li>
-            <Link to="/about&contact">About&Contact</Link>
+            <Link to="/about-contact">About&Contact</Link>
           </li>
           <li>
             <Link to="/dashboard">Userdashboard</Link>

@@ -1,5 +1,6 @@
 import React from "react";
-import Navigation from "../components/navigation";
+import { Link, useNavigate } from "react-router-dom";
+import Navigation from "../components/Navigation";
 import john from "../images/john.png";
 import jane from "../images/jane.png";
 import user from "../images/user.png";
@@ -8,6 +9,7 @@ import friend2 from "../images/friend2.png";
 import "../pages/css/dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div>
     <Navigation />
@@ -53,10 +55,14 @@ const Dashboard = () => {
           />
         </a>
         <p>Here are the detailed information of the user.</p>
-        <a href="settings.html">
-          <button className="edit-btn">Edit</button>
-        </a>
-        <button className="delete-btn">Delete</button>
+        <ul>
+        <li> <Link to="/settings"></Link>
+        <div className="button-group">
+          <button className="edit-btn" onClick={() => navigate("/settings")}>Edit</button>
+          <button className="delete-btn">Delete</button>
+        </div>
+        </li>
+        </ul>
       </section>
 
       <section className="friends-list">

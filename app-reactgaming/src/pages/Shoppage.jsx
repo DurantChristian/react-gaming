@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import gameshop from "../images/gameshop.png";
 import witcher3 from "../images/witcher3.png";
 import cyberpunk from "../images/Cyberpunk2077.png";
@@ -14,6 +14,7 @@ import fortnite from "../images/fortnitecover.png";
 import "../pages/css/shoppage.css";
 
 const Shop = () => {
+  const navigate = useNavigate();
   return (
     <main className="shop-container">
       <input type="text" className="search-box" placeholder="Search for games..." />
@@ -44,9 +45,9 @@ const Shop = () => {
           <p><strong>The Witcher 3</strong></p>
           <p>Best RPG</p>
           <p>Explore a vast open world</p>
-          <a href="order.html">
+          <Link to="/order">{() => navigate("/order")}
             <button className="buy-btn">Buy Now</button>
-          </a>
+          </Link>
         </div>
 
         <div className="game-item">
