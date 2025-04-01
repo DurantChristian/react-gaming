@@ -17,10 +17,10 @@ const Header = () => {
             <Link to="/reviews">Game Reviews</Link>
           </li>
           <li>
-            <Link to="/about-contact">About&Contact</Link>
+            <Link to="/about-contact">About & Contact</Link>
           </li>
           <li>
-            <Link to="/dashboard">Userdashboard</Link>
+            <Link to="/dashboard">User Dashboard</Link>
           </li>
         </ul>
       </nav>
