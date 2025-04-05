@@ -11,22 +11,17 @@ import sims4 from "../images/sims.png";
 import nascar from "../images/nascar.png";
 import minecraft from "../images/minecraft.png";
 import fortnite from "../images/fortnitecover.png";
+import Shopsearchbar from "../components/Shopsearchbar";
+import Shopnav from "../components/Shopnav";
 import "../pages/css/shoppage.css";
 
 const Shop = () => {
   const navigate = useNavigate();
   return (
     <main className="shop-container">
-      <input type="text" className="search-box" placeholder="Search for games..." />
+      <Shopsearchbar />
 
-      <nav className="secondary-nav">
-        <ul>
-          <li><Link to="/shop">Games</Link></li>
-          <li><Link to="/shop">Toys</Link></li>
-          <li><Link to="/shop">Accessories</Link></li>
-          <li><Link to="/shop">Consoles</Link></li>
-        </ul>
-      </nav>
+      <Shopnav />
 
       <a href="https://th.bing.com/th/id/OIP.YwK20X8_XASiPvJk1ZmsUgAAAA?rs=1&pid=ImgDetMain">
         <img

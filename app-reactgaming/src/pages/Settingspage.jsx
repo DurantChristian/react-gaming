@@ -20,6 +20,35 @@ const Settings = () => {
           </a>
           <button className="update-photo-btn">Update Photo</button>
         </div>
+
+        <form className="settings-form">
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required />
+          
+          <label htmlFor="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+          
+          <label htmlFor="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          
+          <div className="form-buttons">
+            <button type="submit" className="save-btn">Save</button>
+            <button type="reset" className="cancel-btn">Cancel</button>
+          </div>
+        </form>
       </main>
     </div>
   );

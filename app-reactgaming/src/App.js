@@ -11,6 +11,7 @@ import Gamereview from "./pages/Gamereview";
 import Settings from "./pages/Settingspage";
 import Notifications from "./pages/Notificationspage";
 import Activity from "./pages/Activity";
+import NotFound from "./pages/Notfound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/activity" element={<Activity />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
       </>

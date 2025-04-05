@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../components/css/header.css";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <header className="header">
       <nav className="main-nav">
-        <ul>
+      <div id="toggle-nav" onClick={toggleMenu}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-items" class={menuOpen ? "" : "hidden"}>
           <li>
             <Link to="/">Home</Link>
           </li>

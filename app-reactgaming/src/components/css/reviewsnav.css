@@ -1,0 +1,16 @@
+.game-categories ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.game-categories ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.game-categories ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}

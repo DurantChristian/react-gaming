@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import messageImage from "../images/message.png";
 import emailImage from "../images/email.png";
@@ -21,10 +22,10 @@ const Notifications = () => {
         
         <nav className="notifications-nav">
           <ul>
-            <li><a href="#">Alerts</a></li>
-            <li><a href="#">Messages</a></li>
-            <li><a href="#">Updates</a></li>
-            <li><a href="#">Promotions</a></li>
+          <li><Link to="/alerts">Alerts</Link></li>
+          <li><Link to="/messages">Messages</Link></li>
+          <li><Link to="/updates">Updates</Link></li>
+          <li><Link to="/promotions">Promotions</Link></li>
           </ul>
         </nav>
 
