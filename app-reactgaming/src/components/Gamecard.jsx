@@ -26,23 +26,22 @@ const GameCard = () => {
   if (error) return <div>Error loading games: {error.message}</div>;
 
   return (
-    <div className="game-card-list">
+    <>
       {games.map((game) => (
-        <Link key={game._id} to={`/game/${game._id}`} className="game-card-link">
-          <div className="game-card-item">
-            <h3>{game.title}</h3>
-            <img
-              src={`https://serverside-code.onrender.com/images/${game.img_name}`}
-              alt={game.title}
-            />
-            <p>{game.about}</p>
-            <a href={game.external_link} target="_blank" rel="noopener noreferrer">
-              Read More
-            </a>
-          </div>
-        </Link>
+        <div class="review">
+          <h3>{game.title}</h3>
+          <img
+            src={`https://serverside-code.onrender.com/images/${game.img_name}`}
+            alt={game.reference}
+            className="game-image"
+          />
+          <p>{game.about}</p>
+          <Link to={game.external_link} target="_blank" rel="noopener noreferrer" className="read-more">
+            Read More
+          </Link>
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 
