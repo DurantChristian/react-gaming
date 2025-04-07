@@ -5,6 +5,14 @@ import GameCard from "../components/Gamecard";
 import "../pages/css/reviewspage.css";
 
 const Reviews = () => {
+  const [setGames] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get("https://serverside-code.onrender.com/api/games");
+      setGames(response.data);
+    })();
+  }, []);
   return (
     <>
       <header>
