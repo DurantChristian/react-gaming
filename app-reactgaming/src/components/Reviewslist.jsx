@@ -3,10 +3,13 @@ import "./css/reviewlist.css";
 import axios from "axios";
 import ReviewCard from "./Reviewcard";
 import AddReview from "./Addreview";
+import DeleteReview from "./Deletereview";
 
 const ReviewsList = () => {
   const [reviews, setReviews] = useState([]);
   const [showAddDialog, setShowAddDialog] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [selectedReview, setSelectedReview] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -18,8 +21,19 @@ const ReviewsList = () => {
   const openAddDialog = () => setShowAddDialog(true);
   const closeAddDialog = () => setShowAddDialog(false);
 
+  const openDeleteDialog = (_id, title) => {
+    setSelectedReview({ _id, title });
+    setShowDeleteDialog(true);
+  };
+
+  const closeDeleteDialog = () => setShowDeleteDialog(false);
+
   const updateReviews = (review) => {
     setReviews((prev) => [...prev, review]);
+  };
+
+  const removeReview = (_id) => {
+    setReviews((prev) => prev.filter((r) => r._id !== _id));
   };
 
   return (
@@ -30,9 +44,10 @@ const ReviewsList = () => {
         <AddReview closeAddDialog={closeAddDialog} updateReviews={updateReviews} />
       )}
 
-        {reviews.map((review) => (
+      {reviews.map((review) => (
+        <div key={review._id} className="review-item-wrapper">
           <ReviewCard
-            key={review._id}
+            _id={review._id}
             title={review.title}
             img_name={review.img_name}
             genre={review.genre}
@@ -41,9 +56,30 @@ const ReviewsList = () => {
             rating={review.rating}
             external_link={review.external_link}
           />
-        ))}
+          <button
+            className="delete-review-btn"
+            onClick={() => openDeleteDialog(review._id, review.title, review.about)}
+          >
+            -
+          </button>
+        </div>
+      ))}
+
+      {showDeleteDialog && selectedReview && (
+        <DeleteReview
+          _id={selectedReview._id}
+          name={selectedReview.title}
+          about={selectedReview.about}
+          closeDialog={closeDeleteDialog}
+          hideReview={() => {
+            removeReview(selectedReview._id);
+            closeDeleteDialog();
+          }}
+        />
+      )}
     </>
   );
 };
 
 export default ReviewsList;
+
