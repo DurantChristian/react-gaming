@@ -10,7 +10,7 @@ const ReviewsList = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get("http://localhost:3001/api/reviews");
+      const response = await axios.get("http://localhost:3001/api/games");
       setReviews(response.data);
     })();
   }, []);
@@ -30,7 +30,6 @@ const ReviewsList = () => {
         <AddReview closeAddDialog={closeAddDialog} updateReviews={updateReviews} />
       )}
 
-      <div className="review-grid">
         {reviews.map((review) => (
           <ReviewCard
             key={review._id}
@@ -43,7 +42,6 @@ const ReviewsList = () => {
             external_link={review.external_link}
           />
         ))}
-      </div>
     </>
   );
 };
