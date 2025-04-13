@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./css/reviewslist.css";
+import "./css/reviewlist.css";
 import axios from "axios";
 import ReviewCard from "./Reviewcard";
 import AddReview from "./Addreview";
