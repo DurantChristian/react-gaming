@@ -21,7 +21,14 @@
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 16px;
-  }
+}
+
+.review-wrapper {
+    max-width: 300px;
+    max-height: 600px;
+    gap: 20px;
+    display: flex;
+}
   
   .delete-review-btn {
     background-color: #1e88e5;

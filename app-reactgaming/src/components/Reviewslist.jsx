@@ -10,6 +10,7 @@ const ReviewsList = () => {
   const [showAddDialog, setShowAddDialog] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [selectedReview, setSelectedReview] = useState(null);
+  const [sessionReviewIds, setSessionReviewIds] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -21,19 +22,24 @@ const ReviewsList = () => {
   const openAddDialog = () => setShowAddDialog(true);
   const closeAddDialog = () => setShowAddDialog(false);
 
-  const openDeleteDialog = (_id, title) => {
-    setSelectedReview({ _id, title });
+  const openDeleteDialog = (review) => {
+    setSelectedReview(review);
     setShowDeleteDialog(true);
   };
-
-  const closeDeleteDialog = () => setShowDeleteDialog(false);
+  
+  const closeDeleteDialog = () => {
+    setSelectedReview(null);
+    setShowDeleteDialog(false);
+  };
 
   const updateReviews = (review) => {
     setReviews((prev) => [...prev, review]);
+    setSessionReviewIds((prev) => [...prev, review._id]);
   };
 
   const removeReview = (_id) => {
     setReviews((prev) => prev.filter((r) => r._id !== _id));
+    setSessionReviewIds((prev) => prev.filter((rId) => rId !== _id));
   };
 
   return (
@@ -41,13 +47,33 @@ const ReviewsList = () => {
       <button id="add-review" onClick={openAddDialog}>+</button>
 
       {showAddDialog && (
-        <AddReview closeAddDialog={closeAddDialog} updateReviews={updateReviews} />
+        <AddReview
+          closeAddDialog={closeAddDialog}
+          updateReviews={updateReviews}
+        />
+      )}
+
+      {showDeleteDialog && selectedReview && (
+        <DeleteReview
+          _id={selectedReview._id}
+          name={selectedReview.title}
+          about={selectedReview.title}
+          closeDialog={closeDeleteDialog}
+          hideReview={() => removeReview(selectedReview._id)}
+        />
       )}
 
       {reviews.map((review) => (
-        <div key={review._id} className="review-item-wrapper">
+        <div key={review._id} className="review-wrapper">
+          {sessionReviewIds.includes(review._id) && (
+            <button
+              className="delete-button"
+              onClick={() => openDeleteDialog(review)}
+            >
+              -
+            </button>
+          )}
           <ReviewCard
-            _id={review._id}
             title={review.title}
             img_name={review.img_name}
             genre={review.genre}
@@ -56,27 +82,8 @@ const ReviewsList = () => {
             rating={review.rating}
             external_link={review.external_link}
           />
-          <button
-            className="delete-review-btn"
-            onClick={() => openDeleteDialog(review._id, review.title, review.about)}
-          >
-            -
-          </button>
         </div>
       ))}
-
-      {showDeleteDialog && selectedReview && (
-        <DeleteReview
-          _id={selectedReview._id}
-          name={selectedReview.title}
-          about={selectedReview.about}
-          closeDialog={closeDeleteDialog}
-          hideReview={() => {
-            removeReview(selectedReview._id);
-            closeDeleteDialog();
-          }}
-        />
-      )}
     </>
   );
 };

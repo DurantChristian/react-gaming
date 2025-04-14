@@ -23,7 +23,7 @@ const Shop = () => {
 
       <Shopnav />
 
-      <a href="https://kafubackup-new.s3.me-south-1.amazonaws.com/upload1652014572.png">
+      <a href="https://cdn.botb.com/media/kvnjsma5/extremesimbundle-image1.jpg">
         <img
           src={gameshop}
           alt="Featured Game"
