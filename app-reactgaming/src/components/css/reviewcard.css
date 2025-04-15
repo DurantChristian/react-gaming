@@ -31,3 +31,40 @@
     color: #007BFF;
     font-weight: bold;
 }
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+  .button-group {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-button,
+.edit-button {
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.edit-button {
+  background-color: #1e88e5;
+}
+
+.edit-button:hover {
+  background-color: #007bff;
+}

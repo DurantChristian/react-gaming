@@ -4,11 +4,13 @@ import axios from "axios";
 import ReviewCard from "./Reviewcard";
 import AddReview from "./Addreview";
 import DeleteReview from "./Deletereview";
+import EditReview from "./Editreview";
 
 const ReviewsList = () => {
   const [reviews, setReviews] = useState([]);
   const [showAddDialog, setShowAddDialog] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showEditDialog, setShowEditDialog] = useState(false);
   const [selectedReview, setSelectedReview] = useState(null);
   const [sessionReviewIds, setSessionReviewIds] = useState([]);
 
@@ -32,6 +34,16 @@ const ReviewsList = () => {
     setShowDeleteDialog(false);
   };
 
+  const openEditDialog = (review) => {
+    setSelectedReview(review);
+    setShowEditDialog(true);
+  };
+
+  const closeEditDialog = () => {
+    setSelectedReview(null);
+    setShowEditDialog(false);
+  };
+
   const updateReviews = (review) => {
     setReviews((prev) => [...prev, review]);
     setSessionReviewIds((prev) => [...prev, review._id]);
@@ -40,6 +52,14 @@ const ReviewsList = () => {
   const removeReview = (_id) => {
     setReviews((prev) => prev.filter((r) => r._id !== _id));
     setSessionReviewIds((prev) => prev.filter((rId) => rId !== _id));
+  };
+
+  const editReview = (updatedReview) => {
+    setReviews((prev) =>
+      prev.map((review) =>
+        review._id === updatedReview._id ? updatedReview : review
+      )
+    );
   };
 
   return (
@@ -57,22 +77,22 @@ const ReviewsList = () => {
         <DeleteReview
           _id={selectedReview._id}
           name={selectedReview.title}
-          about={selectedReview.title}
+          about={selectedReview.about}
           closeDialog={closeDeleteDialog}
           hideReview={() => removeReview(selectedReview._id)}
         />
       )}
 
+      {showEditDialog && selectedReview && (
+        <EditReview
+          {...selectedReview}
+          closeDialog={closeEditDialog}
+          editReview={editReview}
+        />
+      )}
+
       {reviews.map((review) => (
         <div key={review._id} className="review-wrapper">
-          {sessionReviewIds.includes(review._id) && (
-            <button
-              className="delete-button"
-              onClick={() => openDeleteDialog(review)}
-            >
-              -
-            </button>
-          )}
           <ReviewCard
             title={review.title}
             img_name={review.img_name}
@@ -81,6 +101,9 @@ const ReviewsList = () => {
             release_year={review.release_year}
             rating={review.rating}
             external_link={review.external_link}
+            showActions={sessionReviewIds.includes(review._id)}
+            onDelete={() => openDeleteDialog(review)}
+            onEdit={() => openEditDialog(review)}
           />
         </div>
       ))}
