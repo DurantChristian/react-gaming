@@ -33,7 +33,7 @@ const Editreview = (props) => {
     const formData = new FormData(event.target);
 
     const response = await fetch(
-      `http://localhost:3001/api/games/${props._id}`,
+      `https://serverside-code.onrender.com/api/games/${props._id}`,
       {
         method: "PUT",
         body: formData,
