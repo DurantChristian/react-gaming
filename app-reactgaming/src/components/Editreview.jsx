@@ -136,7 +136,7 @@ const Editreview = (props) => {
                     inputs.img != null
                       ? URL.createObjectURL(inputs.img)
                       : inputs.prev_img != null
-                      ? `http://localhost:3001/${inputs.prev_img}`
+                      ? `https://serverside-code.onrender.com/${inputs.prev_img}`
                       : ""
                   }
                   alt="Preview"
