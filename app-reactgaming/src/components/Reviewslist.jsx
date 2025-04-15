@@ -16,7 +16,7 @@ const ReviewsList = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get("http://localhost:3001/api/games");
+      const response = await axios.get("https://serverside-code.onrender.com/api/games");
       setReviews(response.data);
     })();
   }, []);

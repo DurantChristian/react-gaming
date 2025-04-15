@@ -17,7 +17,7 @@ const AddReview = (props) => {
     const formData = new FormData(event.target);
     console.log(...formData);
 
-    const response = await fetch("http://localhost:3001/api/games", {
+    const response = await fetch("https://serverside-code.onrender.com/api/games", {
       method: "POST",
       body: formData,
     });

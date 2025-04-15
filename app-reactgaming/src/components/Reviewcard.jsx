@@ -13,7 +13,7 @@ const ReviewCard = (props) => {
           </div>
         )}
         </div>
-      <img src={`http://localhost:3001/images/${props.img_name}`} alt={props.img_name} />
+      <img src={`https://serverside-code.onrender.com/images/${props.img_name}`} alt={props.img_name} />
       <p><strong>Genre:</strong> {props.genre}</p>
       <p>{props.about}</p>
       <p><strong>Release Year:</strong> {props.release_year}</p>
