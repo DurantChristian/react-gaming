@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/react-gaming/static/css/main.180a2c3f.css",
+    "main.js": "/react-gaming/static/js/main.cecaa0d5.js",
+    "static/media/gamedeveloper.png": "/react-gaming/static/media/gamedeveloper.7d0707a1108f35df2112.png",
+    "static/media/topsell.png": "/react-gaming/static/media/topsell.ecd39b12f68722eba132.png",
+    "static/media/alex.png": "/react-gaming/static/media/alex.22dcd713b49ecea07e2a.png",
+    "static/media/exclusives.png": "/react-gaming/static/media/exclusives.6e1812be9057c102008a.png",
+    "static/media/sims.png": "/react-gaming/static/media/sims.8eb91546398730c99b04.png",
+    "static/media/accessories.png": "/react-gaming/static/media/accessories.cbafedebdcb111439121.png",
+    "static/media/patches.png": "/react-gaming/static/media/patches.d8472561e0f82f6cc560.png",
+    "static/media/nascar.png": "/react-gaming/static/media/nascar.20163ed861a9cfb0c7e6.png",
+    "static/media/gameshop.png": "/react-gaming/static/media/gameshop.e712bad78ea0c540d0c7.png",
+    "static/media/friend2.png": "/react-gaming/static/media/friend2.28f5e6253c6b369dc976.png",
+    "static/media/Cyberpunk2077.png": "/react-gaming/static/media/Cyberpunk2077.070798db767120660ea7.png",
+    "static/media/upcominggames.png": "/react-gaming/static/media/upcominggames.bf150e147e39819c9b4b.png",
+    "static/media/frozen.png": "/react-gaming/static/media/frozen.ae3214b2588f1d5c35cd.png",
+    "static/media/fortnitecover.png": "/react-gaming/static/media/fortnitecover.693d8f2fd03ef10b7fc3.png",
+    "static/media/competitive.png": "/react-gaming/static/media/competitive.52def41bd69be0e2a536.png",
+    "static/media/minecraft.png": "/react-gaming/static/media/minecraft.38c432c8b20a72c605ec.png",
+    "static/media/gameofthemonth.png": "/react-gaming/static/media/gameofthemonth.d8d9ed4873dc355ff05f.png",
+    "static/media/task.png": "/react-gaming/static/media/task.14ab9cd430f4565a96e2.png",
+    "static/media/email.png": "/react-gaming/static/media/email.d5eeafca6e32487f1203.png",
+    "static/media/gamble.png": "/react-gaming/static/media/gamble.5fdc618fbf5da0eef3ca.png",
+    "static/media/witcher3.png": "/react-gaming/static/media/witcher3.17923f8e755304be1ff6.png",
+    "static/media/user.png": "/react-gaming/static/media/user.99ed2e5a43b2f472591b.png",
+    "static/media/john.png": "/react-gaming/static/media/john.fb14c15e81b82efa1f05.png",
+    "static/media/eldenring.png": "/react-gaming/static/media/eldenring.c0219826ae0236b8bd62.png",
+    "static/media/jane.png": "/react-gaming/static/media/jane.7316aa0967b080e222cc.png",
+    "static/media/storelogo.png": "/react-gaming/static/media/storelogo.0bded530f02fdee96c50.png",
+    "static/media/friend1.png": "/react-gaming/static/media/friend1.bd30b85911ef4f0c88f0.png",
+    "static/media/message.png": "/react-gaming/static/media/message.883efdbf32dc4c196ca5.png",
+    "index.html": "/react-gaming/index.html",
+    "main.180a2c3f.css.map": "/react-gaming/static/css/main.180a2c3f.css.map",
+    "main.cecaa0d5.js.map": "/react-gaming/static/js/main.cecaa0d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.180a2c3f.css",
+    "static/js/main.cecaa0d5.js"
+  ]
+}
