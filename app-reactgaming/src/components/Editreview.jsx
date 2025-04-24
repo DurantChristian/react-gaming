@@ -30,7 +30,14 @@ const Editreview = (props) => {
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData();
+    formData.append("title", inputs.title);
+    formData.append("genre", inputs.genre);
+    formData.append("about", inputs.about);
+    formData.append("rating", inputs.rating);
+    formData.append("release_year", parseInt(inputs.release_year));
+    formData.append("external_link", inputs.external_link);
+    if (inputs.img) formData.append("img", inputs.img);
 
     const response = await fetch(
       `https://serverside-code.onrender.com/api/games/${props._id}`,
@@ -46,7 +53,8 @@ const Editreview = (props) => {
       props.editReview(await response.json());
       props.closeDialog();
     } else {
-      console.log("Error editing review", response);
+      const errorText = await response.text();
+      console.log("Error editing review", errorText);
       setResult("Error updating review");
     }
   };
@@ -87,13 +95,14 @@ const Editreview = (props) => {
             </p>
             <p>
               <label htmlFor="about">About:</label>
-              <textarea
+              <input
+                type="text"
                 id="about"
                 name="about"
                 value={inputs.about || ""}
                 onChange={handleChange}
                 required
-              ></textarea>
+              />
             </p>
             <p>
               <label htmlFor="release_year">Release Year:</label>

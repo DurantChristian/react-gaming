@@ -15,7 +15,7 @@ const ReviewCard = (props) => {
         </div>
       <img src={`https://serverside-code.onrender.com/images/${props.img_name}`} alt={props.img_name} />
       <p><strong>Genre:</strong> {props.genre}</p>
-      <p>{props.about}</p>
+      <p><strong>About:</strong>{props.about}</p>
       <p><strong>Release Year:</strong> {props.release_year}</p>
       <p><strong>Rating:</strong> {props.rating}/10</p>
       <Link to={props.external_link} target="_blank" rel="noopener noreferrer">
