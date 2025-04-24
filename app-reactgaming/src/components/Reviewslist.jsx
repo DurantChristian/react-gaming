@@ -105,7 +105,6 @@ const ReviewsList = () => {
             about={review.about}
             release_year={review.release_year}
             rating={review.rating}
-            {...review}
             reviewData={review}
             showActions={sessionReviewIds.includes(review._id)}
             onDelete={() => openDeleteDialog(review)}

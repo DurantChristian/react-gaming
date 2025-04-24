@@ -9,8 +9,12 @@ const Editreview = (props) => {
     about: props.about,
     release_year: props.release_year,
     rating: props.rating,
-    external_link: props.external_link,
     prev_img: props.img_name,
+    username: props.username || "",
+    difficulty: props.difficulty || 1,
+    graphics: props.graphics || "",
+    fun_factor: props.fun_factor || "",
+    game_rating: props.game_rating || 1,
   });
 
   const handleChange = (event) => {
@@ -36,7 +40,6 @@ const Editreview = (props) => {
     formData.append("about", inputs.about);
     formData.append("rating", inputs.rating);
     formData.append("release_year", parseInt(inputs.release_year));
-    formData.append("external_link", inputs.external_link);
     if (inputs.img) formData.append("img", inputs.img);
 
     const response = await fetch(
@@ -127,13 +130,43 @@ const Editreview = (props) => {
               />
             </p>
             <p>
-              <label htmlFor="external_link">External Link:</label>
+              <label>Your Name:</label>
+              <input name="username" value={inputs.username} onChange={handleChange} required />
+            </p>
+            <p>
+              <label>Aim of the Game:</label>
+              <input name="about" value={inputs.about} onChange={handleChange} required />
+            </p>
+            <p>
+              <label>Difficulty rating (1-5):</label>
               <input
-                type="url"
-                id="external_link"
-                name="external_link"
-                value={inputs.external_link || ""}
+                type="number"
+                name="difficulty"
+                min="1"
+                max="5"
+                value={inputs.difficulty}
                 onChange={handleChange}
+                required
+              />
+            </p>
+            <p>
+              <label>Quality of the graphics:</label>
+              <input name="graphics" value={inputs.graphics} onChange={handleChange} required />
+            </p>
+            <p>
+              <label>Is the game fun to play? Why or why not?</label>
+              <input name="fun_factor" value={inputs.fun_factor} onChange={handleChange} required />
+            </p>
+            <p>
+              <label>Rate the game (1–5):</label>
+              <input
+                type="number"
+                name="rating"
+                min="1"
+                max="5"
+                value={inputs.game_rating}
+                onChange={handleChange}
+                required
               />
             </p>
 
