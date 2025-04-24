@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./css/reviewlist.css";
 import axios from "axios";
 import ReviewCard from "./Reviewcard";
-import ReviewDetails from "./Reviewdetails";
 import AddReview from "./Addreview";
 import DeleteReview from "./Deletereview";
 import EditReview from "./Editreview";
@@ -92,11 +91,7 @@ const ReviewsList = () => {
         />
       )}
 
-      {selectedReview ? (
-        <ReviewDetails game={selectedReview} closeDetail={() => setSelectedReview(null)} />
-      ) : (
-
-        reviews.map((review) => (
+      {reviews.map((review) => (
         <div key={review._id} className="review-wrapper">
           <ReviewCard
             title={review.title}
@@ -105,17 +100,16 @@ const ReviewsList = () => {
             about={review.about}
             release_year={review.release_year}
             rating={review.rating}
-            reviewData={review}
+            external_link={review.external_link}
             showActions={sessionReviewIds.includes(review._id)}
             onDelete={() => openDeleteDialog(review)}
             onEdit={() => openEditDialog(review)}
-            onReadMore={(review) => setSelectedReview(review)}
           />
         </div>
-      ))
-    )}
-  </>
-);
-}
+      ))}
+    </>
+  );
+};
+
 export default ReviewsList;
 

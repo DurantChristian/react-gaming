@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "./css/gamecard.css";
-import ReviewDetails from "./Reviewdetails";
 
 const GameCard = () => {
   const [games, setGames] = useState([]);
-  const [selectedGame, setSelectedGame] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -26,15 +25,6 @@ const GameCard = () => {
   if (loading) return <div>Loading games...</div>;
   if (error) return <div>Error loading games: {error.message}</div>;
 
-  if (selectedGame) {
-    return (
-      <ReviewDetails
-        game={selectedGame}
-        closeDetail={() => setSelectedGame(null)}
-        />
-    );
-  }
-
   return (
     <>
       {games.map((game) => (
@@ -46,9 +36,9 @@ const GameCard = () => {
             className="game-image"
           />
           <p>{game.about}</p>
-          <button onClick={() => setSelectedGame(game)} className="read-more">
+          <Link to={game.external_link} target="_blank" rel="noopener noreferrer" className="read-more">
             Read More
-          </button>
+          </Link>
         </div>
       ))}
     </>

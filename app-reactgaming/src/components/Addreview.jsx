@@ -72,33 +72,8 @@ const AddReview = (props) => {
             </p>
 
             <p>
-              <label htmlFor="username">Your Name:</label>
-              <input type="text" id="username" name="username" required />
-            </p>
-
-            <p>
-              <label htmlFor="about">Aim of the Game:</label>
-              <input type="text" id="about" name="about" required />
-            </p>
-
-            <p>
-              <label htmlFor="difficulty">Difficulty rating (1–5):</label>
-              <input type="number" id="difficulty" name="difficulty" min="1" max="5" required />
-            </p>
-
-            <p>
-              <label htmlFor="graphics">Quality of the graphics:</label>
-              <input type="text" id="graphics" name="graphics" required />
-            </p>
-
-            <p>
-              <label htmlFor="fun_factor">Is the game fun to play? Why or why not?</label>
-              <input type="text" id="fun_factor" name="fun_factor" required />
-            </p>
-
-            <p>
-              <label htmlFor="game_rating">Rate the game (1–5):</label>
-              <input type="number" id="game_rating" name="game_rating" min="1" max="5" required />
+              <label htmlFor="external_link">External Link:</label>
+              <input type="url" id="external_link" name="external_link" />
             </p>
 
 
