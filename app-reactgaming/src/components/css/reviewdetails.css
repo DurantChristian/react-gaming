@@ -1,0 +1,19 @@
+.review-detail {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border: 1px solid black;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .detail-box p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .detail-box button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+  

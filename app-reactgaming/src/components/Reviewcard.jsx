@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import "./css/reviewcard.css";
 
 const ReviewCard = (props) => {
+  const handleReadMore = () => {
+    props.onReadMore(props.reviewData);
+  };
+
   return (
     <section className="review">
         <div className="review-header">
@@ -18,9 +22,9 @@ const ReviewCard = (props) => {
       <p><strong>About:</strong>{props.about}</p>
       <p><strong>Release Year:</strong> {props.release_year}</p>
       <p><strong>Rating:</strong> {props.rating}/10</p>
-      <Link to={props.external_link} target="_blank" rel="noopener noreferrer">
+      <button className="read-more" onClick={handleReadMore}>
         Read More
-      </Link>
+      </button>
     </section>
   );
 };
