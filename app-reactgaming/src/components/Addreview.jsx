@@ -68,7 +68,7 @@ const AddReview = (props) => {
 
             <p>
               <label htmlFor="rating">Rating:</label>
-              <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" required />
+              <input type="text" id="rating" name="rating" min="0" max="10" step="0.1" required />
             </p>
 
             <p>
