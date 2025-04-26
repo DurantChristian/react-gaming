@@ -118,16 +118,18 @@ const Editreview = (props) => {
             <p>
               <label htmlFor="rating">Rating:</label>
               <input
-                type="text"
+                type="number"
                 id="rating"
                 name="rating"
+                min="0"
+                max="10"
                 value={inputs.rating || ""}
                 onChange={handleChange}
                 required
               />
             </p>
             <p>
-              <label htmlFor="external_link">External Link:</label>
+              <label htmlFor="external_link">External Link (game review link ex https://youtube.com):</label>
               <input
                 type="url"
                 id="external_link"
